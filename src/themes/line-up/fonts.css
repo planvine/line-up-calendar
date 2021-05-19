@@ -1,0 +1,11 @@
+@font-face {
+  font-family: latobold;
+  src: url(./fonts/lato-bold.woff2) format('woff2'),
+    url(./fonts/lato-bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: latoregular;
+  src: url(./fonts/lato-regular.woff2) format('woff2'),
+    url(./fonts/lato-regular.woff) format('woff');
+}
