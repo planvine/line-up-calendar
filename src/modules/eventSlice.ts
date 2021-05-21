@@ -21,8 +21,15 @@ const eventsEntity = [eventEntity]
 type EventsResponse = {
   events?: { [key: string]: Event }
 }
-
-export const eventsAdapter = createEntityAdapter<Event>()
+const parseDate = (date?: string, time?: string) =>
+  DateTime.fromSQL(`${date} ${time}`)
+export const eventsAdapter = createEntityAdapter<Event>({
+  sortComparer: (a, b) =>
+    parseDate(a.nextPerformance?.startDate, a.nextPerformance?.startTime) >
+    parseDate(b.nextPerformance?.startDate, b.nextPerformance?.startTime)
+      ? 1
+      : -1,
+})
 
 export const fetchEvents = createAsyncThunk<
   EventsResponse,
