@@ -22,10 +22,10 @@ const LineUpTheme = {
     alertColor: '#c80909',
     accentColor: '#56bac3',
 
-    mainBackgroundColor: '#f1f1f1',
+    mainBackgroundColor: '#ffffff',
     mainBackgroundColorComplement: '#787878',
 
-    secondaryBackgroundColor: '#ffffff',
+    secondaryBackgroundColor: '#f1f1f1',
     secondaryBackgroundColorComplement: '#595959',
   },
 }

@@ -24,10 +24,10 @@ declare module 'styled-components' {
       alertColor: string // Alert color e.g. error state
       accentColor: string //
 
-      mainBackgroundColor: string // Main darker background e.g. left side panel
+      mainBackgroundColor: string // Main background e.g. behind tile text
       mainBackgroundColorComplement: string
 
-      secondaryBackgroundColor: string // Lighter background colour e.g. behind calendar
+      secondaryBackgroundColor: string // Alternative background colour
       secondaryBackgroundColorComplement: string
     }
   }

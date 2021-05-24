@@ -31,6 +31,7 @@ import { selectApiKey } from 'modules/settingsSlice'
 
 const ContentWrapper = styled.div`
   display: flex;
+  background: ${props => props.theme.colors.mainBackgroundColor};
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 2rem;
@@ -71,7 +72,7 @@ const RightColumn = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  background: ${props => props.theme.colors.mainBackgroundColor};
+  background: ${props => props.theme.colors.secondaryBackgroundColor};
   order: 3;
   ${media.tablet} {
     order: 2;

@@ -17,9 +17,10 @@ const EventTilePadder = styled.div`
   height: 100%;
   border: 1px solid ${props => props.theme.colors.borderColor};
   border-radius: 4px;
+  background: ${props => props.theme.colors.mainBackgroundColor};
 
   :hover {
-    background: ${props => props.theme.colors.mainBackgroundColor};
+    background: ${props => props.theme.colors.secondaryBackgroundColor};
     transition: background 0.5s ease;
 
     ${EventTileImageWrapper} {
