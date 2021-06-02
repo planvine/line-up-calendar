@@ -182,17 +182,7 @@ const EventDetailContainer: React.FC = () => {
             mainColor={theme.colors.accentColor}
             apikey={apiKey}
           />
-          <MapWrapper>
-            <Title
-              isCapitalised={false}
-              isCentralised={false}
-              size='small'
-              isBold={true}
-            >
-              Location:
-            </Title>
-            <Map lat={event.venue.lat} lng={event.venue.lng} />
-          </MapWrapper>
+
           <PoweredByButton
             isLink={true}
             text='Powered by Line-Up'
