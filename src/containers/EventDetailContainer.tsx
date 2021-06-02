@@ -13,7 +13,6 @@ import {
   IconTitle,
   Icon,
   TicketingWidget,
-  Map,
   Loader,
 } from 'components'
 
@@ -98,8 +97,6 @@ const CloseButton = styled.button`
     background: ${props => props.theme.colors.accentColor};
   }
 `
-
-const MapWrapper = styled.div``
 
 const StyledImgix = styled(Imgix)`
   width: 35vw;
