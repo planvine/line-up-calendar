@@ -42,5 +42,6 @@ export interface Event {
   image: Image
   venue: Venue
   nextPerformance?: Performance
+  lastPerformance?: Performance
   description?: string
 }

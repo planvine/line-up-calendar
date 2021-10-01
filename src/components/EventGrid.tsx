@@ -39,6 +39,7 @@ const EventsGrid: React.FC<Props> = ({ events, onEventClick }) => {
             venue={event.venue.name}
             date={event.nextPerformance?.startDate}
             time={event.nextPerformance?.startTime}
+            multipleDates={!!event.nextPerformance && !!event.lastPerformance}
             imageUrl={event.image.url}
             onClick={onEventClick}
           />
