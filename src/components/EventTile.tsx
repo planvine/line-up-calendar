@@ -87,6 +87,7 @@ interface Props {
   imageUrl: string
   date?: string
   time?: string
+  multipleDates: boolean
   onClick: (id: number) => void
 }
 
@@ -97,10 +98,13 @@ const EventTile: React.FC<Props> = ({
   venue,
   date,
   time,
+  multipleDates = false,
   onClick,
 }) => {
   const handleClick = () => onClick && onClick(id)
-
+  const dateString = DateTime.fromSQL(`${date} ${time}`).toLocaleString(
+    DateTime.DATETIME_MED
+  )
   return (
     <EventTileWrapper>
       <EventTilePadder onClick={handleClick}>
@@ -127,9 +131,11 @@ const EventTile: React.FC<Props> = ({
           {date && (
             <IconTitle
               icon='calendar'
-              title={DateTime.fromSQL(`${date} ${time}`).toLocaleString(
-                DateTime.DATETIME_MED
-              )}
+              title={
+                multipleDates
+                  ? `Next Date: ${dateString}`
+                  : `From: ${dateString}`
+              }
             />
           )}
         </EventTileDescriptionWrapper>
